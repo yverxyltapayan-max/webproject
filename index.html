@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Boracay · white beach paradise</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    @keyframes float {
+      0%,100%{transform:translateY(0);}
+      50%{transform:translateY(-12px);}
+    }
+    @keyframes pulse-glow {
+      0%,100%{opacity:1;box-shadow:0 0 0 0 rgba(255,215,0,0.5);}
+      50%{opacity:0.9;box-shadow:0 0 35px 15px rgba(255,200,50,0.4);}
+    }
+    @keyframes soft-shimmer {
+      0%,100%{ background-position: 0% 50%; }
+      50%{ background-position: 100% 50%; }
+    }
+    .animate-float { animation: float 4s ease-in-out infinite; }
+    .animate-pulse-glow { animation: pulse-glow 2.2s infinite; }
+    .shimmer-bg { background: linear-gradient(145deg, #0a2b26, #1a4d40, #0e352e); background-size: 300% 300%; animation: soft-shimmer 8s ease infinite; }
+    .slide-transition { transition: opacity 0.8s cubic-bezier(0.45, 0, 0.55, 1); }
+    .vid-card:hover { transform: scale(1.02) translateY(-6px); box-shadow: 0 40px 50px -20px #fbbf24; }
+    .glass-card { background: rgba(10, 40, 35, 0.6); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); border: 1px solid rgba(255, 215, 0, 0.25); }
+    .elegant-border { border-image: linear-gradient(45deg, #fbbf24, #d97706) 1; }
+  </style>
+</head>
+<body class="bg-[#0b2f2a] text-gray-100 font-sans antialiased overflow-x-hidden">
+
+  <nav class="flex items-center justify-between px-4 md:px-16 py-5 bg-[#0a2b26]/80 backdrop-blur-xl border-b border-amber-300/20 sticky top-0 z-30">
+    <div class="flex items-center gap-2 text-2xl md:text-3xl font-bold tracking-wide">
+      <i class="fas fa-umbrella-beach text-amber-300"></i>
+      <span class="text-white">BORACAY<span class="text-amber-400">.</span></span>
+    </div>
+    <ul class="hidden md:flex gap-10 text-lg font-medium">
+      <li><a href="#" class="hover:text-amber-300 border-b-2 border-transparent hover:border-amber-400 pb-1 transition-all">home</a></li>
+      <li><a href="#explore" class="hover:text-amber-300 border-b-2 border-transparent hover:border-amber-400 pb-1 transition-all">explore</a></li>
+      <li><a href="#slideshow" class="hover:text-amber-300 border-b-2 border-transparent hover:border-amber-400 pb-1 transition-all">spots</a></li>
+      <li><a href="#video-showcase" class="hover:text-amber-300 border-b-2 border-transparent hover:border-amber-400 pb-1 transition-all">film</a></li>
+      <li><a href="#contact" class="hover:text-amber-300 border-b-2 border-transparent hover:border-amber-400 pb-1 transition-all">contact</a></li>
+    </ul>
+    <i class="fas fa-bars text-2xl md:hidden text-amber-200"></i>
+  </nav>
+
+  <section id="explore" class="relative h-[90vh] flex items-center justify-center text-center bg-cover bg-center bg-fixed" style="background-image: linear-gradient(135deg, rgba(0,40,30,0.65), rgba(0,20,10,0.75)), url('https://images.unsplash.com/photo-1589394815804-964ed0be2eb5?q=80&w=2070&auto=format&fit=crop');">
+    <div class="max-w-5xl px-5">
+      <h1 class="text-5xl sm:text-6xl md:text-8xl font-black uppercase tracking-[0.15em] md:tracking-[0.2em] drop-shadow-2xl text-white [text-shadow:4px_4px_0_#1b5e4b] animate-float">explore<br>boracay</h1>
+      <p class="text-xl sm:text-2xl md:text-4xl mt-6 font-light text-amber-50 drop-shadow-lg">the island that will steal your heart</p>
+      <div class="mt-12 flex gap-4 sm:gap-6 justify-center flex-wrap">
+        <a href="#slideshow" class="bg-amber-400 hover:bg-amber-500 text-gray-900 font-bold text-lg sm:text-xl md:text-2xl px-6 sm:px-10 md:px-12 py-4 sm:py-5 rounded-full shadow-2xl transition-all hover:scale-105 animate-pulse-glow flex items-center gap-3"><i class="fas fa-camera"></i> <span class="hidden xs:inline">view</span> spots</a>
+        <a href="#video-showcase" class="border-2 border-amber-300/80 text-amber-50 hover:bg-white/10 text-lg sm:text-xl md:text-2xl px-6 sm:px-8 md:px-10 py-4 sm:py-5 rounded-full transition-all backdrop-blur-sm">watch film</a>
+      </div>
+    </div>
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 text-amber-200 text-3xl animate-bounce">
+      <i class="fas fa-chevron-down"></i>
+    </div>
+  </section>
+
+  <section id="video-showcase" class="py-16 md:py-24 px-4 shimmer-bg">
+    <div class="max-w-7xl mx-auto">
+      <h2 class="text-4xl sm:text-5xl md:text-7xl font-light text-center text-amber-100 mb-4 tracking-wide"> cinematic island </h2>
+      <p class="text-center text-amber-200/80 text-xl sm:text-2xl mb-12 md:mb-16">a glimpse into the pearl of the Philippines</p>
+      
+      <div class="grid lg:grid-cols-2 gap-8 md:gap-10 items-center">
+        <div class="rounded-3xl overflow-hidden shadow-2xl border-4 border-amber-300/30 bg-black/40 aspect-video">
+          <video class="w-full h-full object-cover" controls poster="https://images.unsplash.com/photo-1518509562904-e7ef99cdcc86?q=80&w=1974&auto=format&fit=crop">
+            <source src="video/Boracay Island Philippines_ The Best Island in the World.mp4" type="video/mp4">
+            Your browser does not support the video tag. 
+            <a href="https://www.youtube.com/watch?v=2qZJhq1oJ3o" class="text-amber-300 underline">watch on youtube</a>
+          </video>
+        </div>
+        <div class="glass-card p-6 sm:p-8 md:p-10 rounded-3xl border-l-8 border-amber-400 space-y-4 md:space-y-6">
+          <h3 class="text-3xl sm:text-4xl md:text-5xl font-black text-amber-300">why boracay?</h3>
+          <p class="text-lg sm:text-xl text-amber-50/90 leading-relaxed">Powder-white sand, vibrant coral gardens, and the warmest Filipino hospitality — this island isn't just a destination, it's a feeling. Let this video take you through the crystal waters, legendary sunsets, and the pure joy of island life.</p>
+          <ul class="space-y-3 text-base sm:text-lg text-amber-100/80">
+            <li><i class="fas fa-sun text-amber-400 w-8"></i> <span class="font-semibold">4km of White Beach</span> – perfect for sunset strolls</li>
+            <li><i class="fas fa-water text-amber-400 w-8"></i> <span class="font-semibold">Puka Shell & Bulabog</span> – serenity & kite sports</li>
+            <li><i class="fas fa-umbrella-beach text-amber-400 w-8"></i> <span class="font-semibold">Ariel's Point cliff jump</span> – adrenaline rush</li>
+            <li><i class="fas fa-utensils text-amber-400 w-8"></i> <span class="font-semibold">D’Talipapa seafood</span> – feast like a local</li>
+          </ul>
+          <p class="text-base sm:text-lg italic text-amber-200/70">“Come for the beach, stay for the magic.”</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="slideshow" class="py-16 md:py-20 px-4 bg-gradient-to-b from-[#0a2924] to-[#06332b]">
+    <h2 class="text-4xl sm:text-5xl md:text-6xl font-light text-center mb-4 text-amber-100 tracking-wider"><span class="font-bold text-amber-400">⋆⁺₊☾</span> tourist spots <span class="font-bold text-amber-400">☽₊⁺⋆</span></h2>
+    <p class="text-center text-amber-200/70 text-lg sm:text-xl mb-12 md:mb-16">click the dots — each view is pure magic</p>
+    <div class="max-w-6xl mx-auto relative">
+      <div class="relative h-[450px] sm:h-[500px] md:h-[600px] rounded-3xl overflow-hidden shadow-2xl border-4 border-white/20">
+        <div class="slide-item absolute inset-0 w-full h-full opacity-1 transition-opacity duration-1000 slide-transition" data-index="0">
+          <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1589394815804-964ed0be2eb5?q=80&w=2070&auto=format&fit=crop');"></div>
+          <div class="absolute inset-0 bg-black/30"></div>
+          <div class="absolute bottom-6 sm:bottom-10 left-4 sm:left-6 md:left-16 right-4 sm:right-6 glass-card p-5 sm:p-6 md:p-10 rounded-2xl border-l-8 border-amber-400 max-w-2xl">
+            <h3 class="text-3xl sm:text-4xl md:text-5xl font-black text-white mb-2 drop-shadow">white beach</h3>
+            <p class="text-lg sm:text-xl md:text-2xl text-amber-100 mb-3">4km of powder-fine sand · world-famous sunset</p>
+            <span class="inline-block bg-amber-500 text-black font-bold px-4 py-1 sm:px-5 sm:py-2 rounded-full text-xs sm:text-sm tracking-wider"><i class="fas fa-map-pin mr-1"></i> station 2 · boat station 1</span>
+          </div>
+        </div>
+        <div class="slide-item absolute inset-0 w-full h-full opacity-0 transition-opacity duration-1000 slide-transition" data-index="1">
+          <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1596178065887-1192f5bd6c2e?q=80&w=2070&auto=format&fit=crop');"></div>
+          <div class="absolute inset-0 bg-black/30"></div>
+          <div class="absolute bottom-6 sm:bottom-10 left-4 sm:left-6 md:left-16 right-4 sm:right-6 glass-card p-5 sm:p-6 md:p-10 rounded-2xl border-l-8 border-amber-400 max-w-2xl">
+            <h3 class="text-3xl sm:text-4xl md:text-5xl font-black text-white mb-2 drop-shadow">puka shell beach</h3>
+            <p class="text-lg sm:text-xl md:text-2xl text-amber-100 mb-3">serene · famous for puka shells & untouched vibe</p>
+            <span class="inline-block bg-amber-500 text-black font-bold px-4 py-1 sm:px-5 sm:py-2 rounded-full text-xs sm:text-sm tracking-wider"><i class="fas fa-map-pin mr-1"></i> north end · 15min tricycle</span>
+          </div>
+        </div>
+        <div class="slide-item absolute inset-0 w-full h-full opacity-0 transition-opacity duration-1000 slide-transition" data-index="2">
+          <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1518509562904-e7ef99cdcc86?q=80&w=1974&auto=format&fit=crop');"></div>
+          <div class="absolute inset-0 bg-black/30"></div>
+          <div class="absolute bottom-6 sm:bottom-10 left-4 sm:left-6 md:left-16 right-4 sm:right-6 glass-card p-5 sm:p-6 md:p-10 rounded-2xl border-l-8 border-amber-400 max-w-2xl">
+            <h3 class="text-3xl sm:text-4xl md:text-5xl font-black text-white mb-2 drop-shadow">willy's rock</h3>
+            <p class="text-lg sm:text-xl md:text-2xl text-amber-100 mb-3">iconic monolith · cliff jump & postcard views</p>
+            <span class="inline-block bg-amber-500 text-black font-bold px-4 py-1 sm:px-5 sm:py-2 rounded-full text-xs sm:text-sm tracking-wider"><i class="fas fa-map-pin mr-1"></i> station 1 · in front of discovery</span>
+          </div>
+        </div>
+        <div class="slide-item absolute inset-0 w-full h-full opacity-0 transition-opacity duration-1000 slide-transition" data-index="3">
+          <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1544551763-46a013bb70d5?q=80&w=2070&auto=format&fit=crop');"></div>
+          <div class="absolute inset-0 bg-black/30"></div>
+          <div class="absolute bottom-6 sm:bottom-10 left-4 sm:left-6 md:left-16 right-4 sm:right-6 glass-card p-5 sm:p-6 md:p-10 rounded-2xl border-l-8 border-amber-400 max-w-2xl">
+            <h3 class="text-3xl sm:text-4xl md:text-5xl font-black text-white mb-2 drop-shadow">bulabog beach</h3>
+            <p class="text-lg sm:text-xl md:text-2xl text-amber-100 mb-3">kiteboarding paradise · windy & wild</p>
+            <span class="inline-block bg-amber-500 text-black font-bold px-4 py-1 sm:px-5 sm:py-2 rounded-full text-xs sm:text-sm tracking-wider"><i class="fas fa-map-pin mr-1"></i> east side · kite center</span>
+          </div>
+        </div>
+        <div class="slide-item absolute inset-0 w-full h-full opacity-0 transition-opacity duration-1000 slide-transition" data-index="4">
+          <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1520454974749-611b7244ff6c?q=80&w=1974&auto=format&fit=crop');"></div>
+          <div class="absolute inset-0 bg-black/30"></div>
+          <div class="absolute bottom-6 sm:bottom-10 left-4 sm:left-6 md:left-16 right-4 sm:right-6 glass-card p-5 sm:p-6 md:p-10 rounded-2xl border-l-8 border-amber-400 max-w-2xl">
+            <h3 class="text-3xl sm:text-4xl md:text-5xl font-black text-white mb-2 drop-shadow">crystal cove</h3>
+            <p class="text-lg sm:text-xl md:text-2xl text-amber-100 mb-3">cave pools & rugged cliffs · adventure awaits</p>
+            <span class="inline-block bg-amber-500 text-black font-bold px-4 py-1 sm:px-5 sm:py-2 rounded-full text-xs sm:text-sm tracking-wider"><i class="fas fa-map-pin mr-1"></i> north west · hop on a boat</span>
+          </div>
+        </div>
+      </div>
+      <div class="flex justify-center mt-6 sm:mt-8 gap-3 sm:gap-4">
+        <button class="dot-btn w-4 h-4 rounded-full bg-amber-200/50 hover:bg-amber-300 transition-all data-[active=true]:bg-amber-400 data-[active=true]:scale-125" data-index="0"></button>
+        <button class="dot-btn w-4 h-4 rounded-full bg-amber-200/50 hover:bg-amber-300 transition-all" data-index="1"></button>
+        <button class="dot-btn w-4 h-4 rounded-full bg-amber-200/50 hover:bg-amber-300 transition-all" data-index="2"></button>
+        <button class="dot-btn w-4 h-4 rounded-full bg-amber-200/50 hover:bg-amber-300 transition-all" data-index="3"></button>
+        <button class="dot-btn w-4 h-4 rounded-full bg-amber-200/50 hover:bg-amber-300 transition-all" data-index="4"></button>
+      </div>
+    </div>
+    <div class="text-center mt-16 sm:mt-20 text-2xl sm:text-3xl md:text-4xl italic font-light text-amber-200/90 flex items-center justify-center gap-4">
+      <i class="fas fa-star text-amber-400 text-xl sm:text-2xl animate-pulse"></i>
+      <span>people will <span class="font-bold text-amber-300 not-italic">intrigue</span> — come, feel the magic</span>
+      <i class="fas fa-star text-amber-400 text-xl sm:text-2xl animate-pulse"></i>
+    </div>
+  </section>
+
+  <section class="py-16 px-4 bg-[#052f28]">
+    <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+      <div>
+        <h3 class="text-3xl sm:text-4xl md:text-5xl font-bold text-amber-300 mb-4 sm:mb-6">more than just beaches</h3>
+        <p class="text-lg sm:text-xl md:text-2xl text-amber-100/80 leading-relaxed">Boracay is also about island hopping, diving at <span class="text-amber-300">crocodile island</span>, enjoying fresh seafood at D'Talipapa, and partying at the famous <span class="text-amber-300">Epic Boracay</span>. Don't miss the <span class="text-amber-300">Ariel's Point</span> cliff jumping – 15m of adrenaline!</p>
+        <ul class="mt-6 sm:mt-8 space-y-3 sm:space-y-4 text-lg sm:text-xl">
+          <li><i class="fas fa-check-circle text-amber-400 mr-4"></i>helmet diving & parasailing</li>
+          <li><i class="fas fa-check-circle text-amber-400 mr-4"></i>fire dance shows on white beach</li>
+          <li><i class="fas fa-check-circle text-amber-400 mr-4"></i>zorb & glass bottom boats</li>
+        </ul>
+      </div>
+      <div class="rounded-3xl overflow-hidden shadow-2xl border-4 border-amber-300/30">
+        <img src="video/boracay-travel-guide-philippines-beach-1350x900.webp" alt="boracay aerial" class="w-full h-auto">
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="py-16 md:py-20 px-4 bg-[#0d4037]">
+    <div class="max-w-4xl mx-auto text-center glass-card p-8 sm:p-12 md:p-20 rounded-[40px] sm:rounded-[60px] border-2 border-amber-400/50 shadow-2xl">
+      <i class="fas fa-phone-alt text-amber-300 text-5xl sm:text-6xl mb-6"></i>
+      <h2 class="text-4xl sm:text-5xl md:text-7xl font-black text-amber-200 mb-6 sm:mb-8">just contact</h2>
+      <p class="text-amber-100 text-2xl sm:text-3xl md:text-4xl font-medium">Fatima Grace Macas</p>
+      <div class="mt-8 sm:mt-10 space-y-4 sm:space-y-6 text-xl sm:text-2xl md:text-3xl">
+        <p class="flex items-center justify-center gap-3 sm:gap-4"><i class="fas fa-mobile-alt text-amber-400"></i> <a href="tel:+639368501271" class="hover:text-amber-300 underline decoration-amber-400/50">09368501271</a></p>
+        <p class="flex items-center justify-center gap-3 sm:gap-4"><i class="fas fa-envelope text-amber-400"></i> <a href="mailto:fatimagracemacas@gmail.com" class="hover:text-amber-300 underline decoration-amber-400/50">fatimagracemacas@gmail.com</a></p>
+      </div>
+      <p class="mt-10 sm:mt-14 text-amber-200/80 text-lg sm:text-xl">💬 call or email — ask anything about Boracay tours, hotels, or island life</p>
+    </div>
+  </section>
+
+  <footer class="bg-[#05221e] py-8 sm:py-10 text-center text-amber-100/60 border-t border-amber-900/30">
+    <p class="text-lg sm:text-xl"><i class="fas fa-heart text-amber-400"></i> feel the white sand · Boracay, Philippines <i class="fas fa-heart text-amber-400"></i></p>
+    <p class="mt-2 sm:mt-3 text-base sm:text-lg">© 2026 · tourism board · all islands open · 🇵🇭</p>
+  </footer>
+
+  <script>
+    (function() {
+      const slides = document.querySelectorAll('.slide-item');
+      const dots = document.querySelectorAll('.dot-btn');
+      if (!slides.length) return;
+
+      let currentIndex = 0;
+      const totalSlides = slides.length;
+
+      function showSlide(index) {
+        if (index < 0) index = totalSlides - 1;
+        if (index >= totalSlides) index = 0;
+
+        slides.forEach((slide, i) => {
+          slide.style.opacity = i === index ? '1' : '0';
+        });
+
+        dots.forEach((dot, i) => {
+          if (i === index) {
+            dot.setAttribute('data-active', 'true');
+            dot.classList.add('bg-amber-400', 'scale-125');
+            dot.classList.remove('bg-amber-200/50');
+          } else {
+            dot.removeAttribute('data-active');
+            dot.classList.remove('bg-amber-400', 'scale-125');
+            dot.classList.add('bg-amber-200/50');
+          }
+        });
+
+        currentIndex = index;
+      }
+
+      dots.forEach((dot, idx) => {
+        dot.addEventListener('click', () => showSlide(idx));
+      });
+
+      setInterval(() => {
+        showSlide(currentIndex + 1);
+      }, 6000);
+
+      showSlide(0);
+    })();
+  </script>
+
+</body>
+</html>
